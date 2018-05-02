@@ -5,7 +5,10 @@
 <h1>Zoo Detail {{ exhibit.id }} - {{ exhibit.name }} in {{ exhibit.zoo.name }}</h1>
 
 <h1>Neighbors</h1>
-	{{  neighbors.id  }} 
+	
+	{% for neighbor in exhibit.fromExhibit.all %}
+		<p>{{ neighbor.direction }} to {{ neighbor.toExhibit.name }}</p>
+	{% endfor %}
 	
 <h1>Animals</h1>
 

@@ -8,13 +8,13 @@ from django.urls import reverse
 
 class Zoo(models.Model):
 	name = models.CharField(max_length=200, help_text="Enter a Zoo Name)")
-	logoFileName = models.CharField(max_length=200, help_text="Enter a Zoo Name)", null=True)
+	logoFileName = models.CharField(max_length=200, help_text="Enter a logo image", null=True)
 	
 	def __str__ (self):
 		return self.name
 		
 	def get_absolute_url(self):
-		return reverse('zooDetail', args[str(self.id)])
+		return reverse('zooDetail', args=[str(self.id)])
 	
 class Exhibit(models.Model):
 	name = models.CharField(max_length=200, help_text="Enter an Exhibit Name)")
