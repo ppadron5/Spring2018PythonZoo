@@ -2,18 +2,19 @@
 
 {% block content %}
 
-<h1>Zoo Detail {{ exhibit.id }} - {{ exhibit.name }} in {{ exhibit.zoo.name }}</h1>
+<h1>{{ exhibit.name }}</h1>
 
 <h1>Neighbors</h1>
-	
-	{% for neighbor in exhibit.fromExhibit.all %}
-		<p>{{ neighbor.direction }} to {{ neighbor.toExhibit.name }}</p>
-	{% endfor %}
-	
+
+{% for neighbors in exhibit.fromExhibit.all %}
+    <p><a href="{{ neighbors.toExhibit.id }}">{{ neighbors.direction }} {{ neighbors.toExhibit }}</a></p>
+{% endfor %}
+
 <h1>Animals</h1>
 
-{% for animal in exhibit.animal_set.all %}
-	<p>{{ animal.name }}</p>
+{% for animals in exhibit.parentExhibit.all %}
+    <p><a href="/zoo/animal/{{ animals.id }}">{{ animals.name }}</a></p>
 {% endfor %}
+
 
 {% endblock %}

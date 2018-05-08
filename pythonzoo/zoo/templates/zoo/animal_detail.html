@@ -2,9 +2,16 @@
 
 {% block content %}
 
-<h1>Animal Detail for {{ animal.id }} - {{ animal.name }} in {{ animal.exhibit.name }} in {{ animal.exhibit.zoo.name }}</h1>
+<h1>Zoo Detail {{ animals.id }} {{ animals.name }}</h1>
 
-<h1>Image</h1>
 {% load static %}
-<img src="{% static animal.imageFileName %}">
+
+<img src="{% static animals.imageFilePath %}" alt="Something Broke!">
+
+<h3>Habitat</h3>
+<p>{{ animals.habitatDesc }}</p>
+
+<h3>Diet</h3>
+<p>{{ animals.dietDesc }}</p>
+
 {% endblock %}

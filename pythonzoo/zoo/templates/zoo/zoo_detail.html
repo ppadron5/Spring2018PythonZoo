@@ -2,6 +2,10 @@
 
 {% block content %}
 
-<h1>Zoo Detail {{ zoo.id }} - {{ zoo.name }}</h1>
+<h1>{{ zoo.name }}</h1>
+
+{% for exhibits in zoo.parentZoo.all %}
+    <p><a href="exhibit/{{ exhibits.id }}">{{ exhibits.name }}</a></p>
+{% endfor %}
 
 {% endblock %}
