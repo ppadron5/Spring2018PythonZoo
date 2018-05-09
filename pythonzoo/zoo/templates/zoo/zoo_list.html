@@ -1,11 +1,12 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-<h1 class="zoo">Zoo List</h1>
-
-{% for zoo in zoo_list %}
-    <p><a href="{{ zoo.id }}">{{ zoo.name }}</a></p>
-{% endfor %}
-
+<div class="center">
+	<h1 id="zoo">Zoo List</h1>
+	<div id="zooList">
+		{% for zoo in zoo_list %}
+			<p><a href="{{ zoo.id }}">{{ zoo.name }}</a></p>
+		{% endfor %}
+	</div>
+<div>
 {% endblock %}

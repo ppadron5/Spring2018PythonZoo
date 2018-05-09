@@ -4,7 +4,9 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Zoo List</h1>
+<div class="background">
+</div>
+<h1 id="zooList">Zoo List</h1>
 
 {% for zoo in zoo_list %}
     <p>{{ zoo.name }}</p>

@@ -12,7 +12,7 @@
 
 <h1>Animals</h1>
 
-{% for animals in exhibit.parentExhibit.all %}
+{% for animals in exhibit.animal_set.all %}
     <p><a href="/zoo/animal/{{ animals.id }}">{{ animals.name }}</a></p>
 {% endfor %}
 

@@ -2,10 +2,12 @@
 
 {% block content %}
 
-<h1>{{ zoo.name }}</h1>
+<div class="background">
+	<h1>{{ zoo.name }}</h1>
 
-{% for exhibits in zoo.parentZoo.all %}
-    <p><a href="exhibit/{{ exhibits.id }}">{{ exhibits.name }}</a></p>
-{% endfor %}
+	{% for exhibits in zoo.exhibit_set.all %}
+		<p><a href="exhibit/{{ exhibits.id }}">{{ exhibits.name }}</a></p>
+	{% endfor %}
+</div>
 
 {% endblock %}

@@ -35,6 +35,8 @@ class Animal(models.Model):
 	exhibit = models.ForeignKey('Exhibit', on_delete=models.SET_NULL, null=True)
 	soundFileName = models.CharField(max_length=200, help_text="Enter Sound File", null=True, blank=True)
 	habitatDescription = models.TextField(max_length=1000, help_text="Enter Habitat Description")
+	dietDescription = models.TextField(max_length=1000, help_text="Enter Diet Description", null=True)
+	videoLink = models.CharField(max_length=200, help_text="Enter Video Link", null=True)
 	
 	def __str__ (self):
 		return self.name
