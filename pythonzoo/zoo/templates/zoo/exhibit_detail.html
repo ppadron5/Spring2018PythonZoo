@@ -1,20 +1,24 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-<h1>{{ exhibit.name }}</h1>
-
-<h1>Neighbors</h1>
-
-{% for neighbors in exhibit.fromExhibit.all %}
-    <p><a href="{{ neighbors.toExhibit.id }}">{{ neighbors.direction }} {{ neighbors.toExhibit }}</a></p>
-{% endfor %}
-
-<h1>Animals</h1>
-
-{% for animals in exhibit.animal_set.all %}
-    <p><a href="/zoo/animal/{{ animals.id }}">{{ animals.name }}</a></p>
-{% endfor %}
+<!--<div class="background_image">-->
+	<br>
+	<div class="exibName">
+		<h1>{{ exhibit.name }}</h1>
+	</div>
 
 
+
+	<h1>Animals</h1>
+
+	{% for animals in exhibit.animal_set.all %}
+		<p><a href="/zoo/animal/{{ animals.id }}">{{ animals.name }}</a></p>
+	{% endfor %}
+
+	 <h1>Neighbors</h1>
+
+	{% for neighbors in exhibit.fromExhibit.all %}
+		<p><a href="{{ neighbors.toExhibit.id }}">{{ neighbors.direction }} {{ neighbors.toExhibit }}</a></p>
+	{% endfor %}
+</div>
 {% endblock %}

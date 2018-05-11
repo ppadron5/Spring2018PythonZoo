@@ -8,10 +8,22 @@
 
 <img class="animalCenter" src="{% static animal.imageFileName %}" alt="Something Broke!">
 
+<div class="content">
 <h3>Habitat</h3>
-<p>{{ animal.habitatDescription }}</p>
+
+<div class="description">
+	<p>{{ animal.habitatDescription }}</p>
+</div>
 
 <h3>Diet</h3>
-<p>{{ animal.dietDescription }}</p>
 
+<div class="description">
+	<p>{{ animal.dietDescription }}</p>
+</div>
+<br>
+<h3>Video Link</h3>
+<div class="video">
+	<p><iframe width="560" height="315" src="{{ animal.videoLink }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+</div>
+</div>
 {% endblock %}
