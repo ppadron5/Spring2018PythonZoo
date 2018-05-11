@@ -1,14 +1,14 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<!--<div class="background_image">-->
 	<br>
 	<div class="exibName">
 		<h1>{{ exhibit.name }}</h1>
 	</div>
 
-
-
+<br>
+<br>
+<div class="animalCenter">
 	<h1>Animals</h1>
 
 	{% for animals in exhibit.animal_set.all %}
@@ -20,5 +20,5 @@
 	{% for neighbors in exhibit.fromExhibit.all %}
 		<p><a href="{{ neighbors.toExhibit.id }}">{{ neighbors.direction }} {{ neighbors.toExhibit }}</a></p>
 	{% endfor %}
-</div>
+</div>	
 {% endblock %}

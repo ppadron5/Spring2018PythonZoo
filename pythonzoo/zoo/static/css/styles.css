@@ -42,14 +42,14 @@ margin-right: auto;
 
 
 #zoo {
-font-size: 150px;
+font-size: 125px;
 border-radius: 5px;
 border-style: solid;
 border-width: 5px;
 }
 
 #zooList {
-font-size: 120px;
+font-size: 75px;
 }
 
 .center {
@@ -74,7 +74,7 @@ font-size: 60px;
 }
 
 .background_image {
-background-image: url("https://i.ytimg.com/vi/8myYyMg1fFE/maxresdefault.jpg");
+background-color: #white;
 }
 
 h1 {
@@ -85,4 +85,8 @@ color: green;
 
 p {
 font-color: brown;
+}
+
+.animalCenter {
+text-align: center;
 }
