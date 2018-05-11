@@ -13,6 +13,13 @@ def aboutus(request):
 		"zoo/aboutus.html",
 		context = { }
     )
+    
+def contactus(request):
+    return render (
+        request,
+        "zoo/contact_us.html",
+        context = { }
+    )
 
 class ZooListView(generic.ListView):
 	model = Zoo
